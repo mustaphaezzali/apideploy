@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from curses import flash
 from pathlib import Path
 import os
 
@@ -25,14 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_#=6$reffbq106q!%suz&p&(t+ox9+ivg9)qja37)wjtbfeegf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["localhost","architeoapirec.herokuapp.com"]
+ALLOWED_HOSTS = ["127.0.0.1","architeoapirec.herokuapp.com"]
+CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-    'http://architeoapirec.herokuapp.com',
-]
 
 
 # Application definition
